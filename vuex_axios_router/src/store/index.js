@@ -8,13 +8,14 @@ const state = {// 公共数据
   count: 0
 }
 export default new Vuex.Store({
-  state,
+  state: {
+    count:0
+  },
   mutations: {
     increment(state) {
       state.count++
     }
   },
   getters: {},
-  mutations: {},
   actions: {}
 })

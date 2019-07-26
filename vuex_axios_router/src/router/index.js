@@ -13,7 +13,14 @@ import Child2 from '@/components/Child2'
 Vue.use(Router)
 
 export default new Router({
-  mode:'history',
+  mode: 'history',
+  scrollBehavior(to, from, savePosition) {//前进后退记录滚动条位置并还原
+    if (savePosition) {
+      return savePosition
+    } else { 
+      return {x:0,y:0}
+    }
+   },
   routes: [
     {
       path: '/',
